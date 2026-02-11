@@ -59,70 +59,135 @@
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <a href="">
-            <button><i class="fa-solid fa-circle-question"></i>FAQ</button>
-           </a>
-           <a href="">
-            <button><i class="fa-solid fa-book-open"></i>Learn</button>
-           </a>
-           <a href="">
-            <button><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</button>
-           </a>
+                <button><i class="fa-solid fa-circle-question"></i>FAQ</button>
+              </a>
+              <a href="">
+                <button><i class="fa-solid fa-book-open"></i>Learn</button>
+              </a>
+              <a href="">
+                <button>
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut
+                </button>
+              </a>
             </ul>
           </div>
           <a class="flex items-center gap-1">
             <span class="text-lg font-semibold">English</span>
-            <img src="image/logo.png" alt="">
+            <img src="image/logo.png" alt="" />
             <span class="text-lg font-semibold">জানালা</span>
           </a>
         </div>
         <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal px-1 space-x-2">
-           <a href="">
-            <button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</button>
-           </a>
-           <a href="">
-            <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</button>
-           </a>
-           <a href="">
-            <button class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</button>
-           </a>
+            <a href="">
+              <button class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-circle-question"></i>FAQ
+              </button>
+            </a>
+            <a href="">
+              <button class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-book-open"></i>Learn
+              </button>
+            </a>
+            <a href="">
+              <button class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut
+              </button>
+            </a>
           </ul>
         </div>
       </div>
     </header>
     <main class="mx-20">
-        <!-- Banner section -->
-        <section class="flex flex-col-reverse md:flex-row items-center justify-between">
-            <div class="flex-1 text-center md:text-left">
-               <h2 class="font-bold text-5xl"><span class="text-blue-600">English</span> is Easy!!</h2>
-               <p class="font-hind text-2xl font-medium my-4">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-               <form class="flex flex-col w-64 space-y-3">
-                     <input type="text" class="input" placeholder="Enter your Name" />
-                     <input type="password" class="input" placeholder="Enter your password" />
-                     <button class="btn btn-primary w-32">Get Started</button>
-               </form>
-            </div>
-            <div class="flex-1">
-                <img src="./image/hero-student.png" alt="">
-            </div>
-        </section>
+      <!-- Banner section -->
+      <section
+        class="flex flex-col-reverse md:flex-row items-center justify-between"
+      >
+        <div class="flex-1 text-center md:text-left">
+          <h2 class="font-bold text-5xl">
+            <span class="text-blue-600">English</span> is Easy!!
+          </h2>
+          <p class="font-hind text-2xl font-medium my-4">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+          <form class="flex flex-col w-64 space-y-3">
+            <input type="text" class="input" placeholder="Enter your Name" />
+            <input
+              type="password"
+              class="input"
+              placeholder="Enter your password"
+            />
+            <button class="btn btn-primary w-32">Get Started</button>
+          </form>
+        </div>
+        <div class="flex-1">
+          <img src="./image/hero-student.png" alt="" />
+        </div>
+      </section>
 
-        <!-- lesson btn -->
-        <section>
-              <h2 class="text-4xl font-bold text-center"><span class="text-blue-600">Let's</span> Learn Vocabularies</h2>
-              <div id="level-container" class="flex items-center justify-center gap-5 flex-wrap my-8"></div>
-        </section>
+      <!-- lesson btn -->
+      <section>
+        <h2 class="text-4xl font-bold text-center">
+          <span class="text-blue-600">Let's</span> Learn Vocabularies
+        </h2>
+        <div
+          id="level-container"
+          class="flex items-center justify-center gap-5 flex-wrap my-8"
+        ></div>
+      </section>
 
-        <section class="bg-gray-100 rounded-lg py-10 px-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="word-container">
-               
-                <div class="text-center space-y-4 col-span-full">
-                    <p>আপনি এখনো কোন Lesson Select করেন নি</p>
-                    <h2 class="font-medium text-4xl">একটি Lesson Select করুন।</h2>
-                </div>
-            </div>
+      <!-- spinner -->
+        <section id="spinner" class="flex items-center justify-center  py-10 hidden">
+            <span class="loading loading-bars loading-xl"></span>
+      </section>
 
-        </section>
+      <section class="bg-gray-100 rounded-lg py-10 px-5">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          id="word-container"
+        >
+          <div class="text-center space-y-4 col-span-full">
+            <p>আপনি এখনো কোন Lesson Select করেন নি</p>
+            <h2 class="font-medium text-4xl">একটি Lesson Select করুন।</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <dialog id="word_details" class="modal modal-bottom md:modal-middle">
+        <div class="modal-box">
+          <div id="word-container" class="space-y-5">
+                 <!-- <div class="text-2xl font-bold">
+                   Eager (<i class="fa-solid fa-microphone-lines"></i>:ইগার)
+                 </div>
+                 <div>
+                   <h3 class="font-semibold">Meaning</h3>
+                   <p>আগ্রহী</p>
+                 </div>
+                 <div>
+                   <h3 class="font-semibold">Example</h3>
+                   <p>The kids were eager to open their gifts.</p>
+                 </div>
+                 <div>
+                    <p>সমার্থক শব্দ গুলো</p>
+                    <div>
+                      <div class="btn">btn1</div>
+                      <div class="btn">btn2</div>
+                      <div class="btn">btn3</div>
+                    </div>
+                 </div> -->
+          </div>
+          <div class="mt-2">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn btn-primary">Complete Learning</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <script src="scripts/script.js"></script>
   </body>
