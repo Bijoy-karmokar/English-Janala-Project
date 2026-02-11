@@ -5,3 +5,7 @@
 .font-hind{
     font-family: "Hind Siliguri", sans-serif;
 }
+.active{
+    background-color:blue;
+    color: white;
+}

@@ -4,12 +4,20 @@ const loadLessons = ()=>{
     .then(json=>displayLesson(json.data)
     )
 }
-
+const removeActive=()=>{
+      const lessonsButton = document.querySelectorAll(".lesson-btn");
+      lessonsButton.forEach((btn)=>btn.classList.remove("active"));
+}
 const loadLevelWord=(id)=>{
     // console.log(id);
     fetch(`https://openapi.programming-hero.com/api/level/${id}`)
     .then(res=>res.json())
-    .then(data=>displayWords(data.data)
+    .then(data=>{
+        removeActive();
+        const clickBtn = document.getElementById(`lesson-btn-${id}`);
+        clickBtn.classList.add("active");
+        displayWords(data.data)
+    }
     )
     
 }
@@ -60,7 +68,7 @@ const displayLesson =(lessons)=>{
         // console.log(lesson);
         const lessonDiv = document.createElement("div");
         lessonDiv.innerHTML=`
-         <button onclick="loadLevelWord(${lesson.level_no})" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Lesson-${lesson.level_no}</button>
+         <button id="lesson-btn-${lesson.level_no}" onclick="loadLevelWord(${lesson.level_no})" class="btn btn-outline btn-primary lesson-btn"><i class="fa-solid fa-book-open"></i>Lesson-${lesson.level_no}</button>
         `
         levelContainer.append(lessonDiv);
     }
